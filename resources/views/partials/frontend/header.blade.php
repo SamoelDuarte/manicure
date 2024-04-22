@@ -18,7 +18,7 @@
                             </li>
                             <ul class="single-dropdown">
                                 <li>
-                                    <a href="{{route('contact.index')}}">Contato us</a>
+                                    <a href="{{route('contact.index')}}">Contato</a>
                                 </li>
                                 @guest
                                     <li>
@@ -31,7 +31,7 @@
                                     @endif
                                 @endguest
                                 <li>
-                                    <a href="{{route('cart.index')}}">Cart page</a>
+                                    <a href="{{route('cart.index')}}">Carrinho</a>
                                 </li>
                             </ul>
                             <li>
@@ -55,6 +55,9 @@
                             <li>
                                 <a href="{{route('contact.index')}}">Contato</a>
                             </li>
+                            <li>
+                                <a href="{{route('schedule.index')}}">Agenda</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -63,7 +66,7 @@
                         <ul>
                             @guest
                                 <li><a href="{{route('login')}}">Login</a></li>
-                                <li><a href="{{route('register')}}">Reg</a></li>
+                                <li><a href="{{route('register')}}">Registro</a></li>
                             @else
                                 <li>
                                     <livewire:frontend.header.notification-component />
@@ -75,7 +78,7 @@
                                         @role('admin')
                                         <li>
                                             <a href="{{ route('admin.index') }}" style="color: #578a01;">
-                                                Administration
+                                                Administrção
                                             </a>
                                         @endrole
                                         @auth
@@ -105,7 +108,7 @@
                         <nav id="mobile-menu-active">
                             <ul class="menu-overflow">
                                 <li><a href="{{route('home')}}">HOME</a></li>
-                                <li><a href="{{route('shop.index')}}">PRODUCTS</a></li>
+                                <li><a href="{{route('shop.index')}}">Produtos</a></li>
                                 <li><a href="#">Categorias</a>
                                     <ul>
                                         <li>
@@ -118,20 +121,21 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                                <li><a href="{{route('contact.index')}}">contact</a></li>
+                                <li><a href="{{route('contact.index')}}">Contato</a></li>
+                                <li><a href="{{route('schedule.index')}}">Agenda</a></li>
                                 @guest
                                     <li>
                                         <a href="{{route('login')}}">Login</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('register')}}">Reg</a>
+                                        <a href="{{route('register')}}">Registro</a>
                                     </li>
                                 @else
                                     @role('admin')
-                                        <li><a href="{{ route('admin.index') }}">Administration</a>
+                                        <li><a href="{{ route('admin.index') }}">Administração</a>
                                     @endrole
                                     @role('supervisor')
-                                        <li><a href="{{ route('admin.index') }}">Administration</a>
+                                        <li><a href="{{ route('admin.index') }}">Administração</a>
                                     @endrole
                                     <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
                                     <li>

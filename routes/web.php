@@ -9,6 +9,7 @@ use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Frontend\Payment\PaypalController;
 use App\Http\Controllers\Frontend\Payment\TapController;
 use App\Http\Controllers\Frontend\ProductController;
+use App\Http\Controllers\Frontend\ScheduleController;
 use App\Http\Controllers\Frontend\ShopController;
 use App\Http\Controllers\Frontend\ShopTagController;
 use App\Http\Controllers\Frontend\UserController;
@@ -30,6 +31,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::get('/page/{slug}', [PageController::class, 'show'])->name('page.show');
 Route::post('/mercadolibre/pedido', [MercadoLivreController::class, 'pedido']);
 Route::get('/mercadolibre/refreshtoken', [MercadoLivreController::class, 'refreshToken']);
+Route::get('/agenda', [ScheduleController::class, 'index'])->name('schedule.index');
 
 // Login by social media [ Facebook - Twitter - Google ]
 Route::get('login/{provider}', [LoginController::class, 'redirectToProvider'])->name('social_login');

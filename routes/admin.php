@@ -23,6 +23,7 @@ use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\BlingController;
 use App\Http\Controllers\Backend\MercadoLivreController;
 use App\Http\Controllers\Backend\PostController;
+use App\Http\Controllers\Backend\ServicesController;
 use App\Http\MercadoLivre;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -76,6 +77,10 @@ Route::group(['middleware' => ['roles']], function () {
         Route::get('/getLinksML/{id}', 'getLinksML')->name('getLinksML');
         Route::post('/deleteContaML', 'deleteContaML')->name('deleteContaML');
         Route::get('/imprimirEtiqueta/{order}', [MercadoLivreController::class, 'imprimirEtiqueta'])->name('mercadolivre.imprimirEtiqueta');
+    });
+
+    Route::prefix('/servicos')->controller(ServicesController::class)->group(function () {
+        Route::get('/', 'index')->name('services.index');
     });
 
     Route::prefix('/bling')->controller(BlingController::class)->group(function () {
