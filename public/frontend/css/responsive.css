@@ -229,7 +229,7 @@
     }
 
     .wrapper-padding-2 .container-fluid {
-        padding: 0 70px;
+        padding: 0 15px;
     }
 
     .handicraft-banner-wrapper {
@@ -237,7 +237,7 @@
     }
 
     .hamburger-menu ul > li {
-        margin-left: 27px;
+        display: flex;
     }
 
     .feature-list .single-features-list:first-child,

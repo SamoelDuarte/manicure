@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 124px 0 120px;
 }
 .main-menu ul li {
-    display: block;
+    display: flex;
     padding-bottom: 16px;
     padding-left: 100px;
     padding-top: 17px;
@@ -1355,7 +1355,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .header-top {
     display: flex;
     justify-content: space-between;
-    padding: 19px 0 20px;
+    top 0; left: 0; right: 0;
+    padding: 1rem 7%;
+    position: fixed;
+    align-items: center;
+    z-index: 1000;
 }
 .book-login-register > ul {
     display: flex;
@@ -1395,12 +1399,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0 16px;
     position: relative;
 }
-.menu-style-2.book-menu nav > ul > li {
-    margin: 0 30px;
-}
 .header-bottom-wrapper {
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 .header-cart-2 {
     position: relative;
@@ -8671,6 +8673,12 @@ a.bundle-btn {
 /* 23.1 Heade style of fruits */
 
 .header-sticky-3 {
+    margin-top: 20px;
+    background: #F2C6C2;
+    height: 105px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
     left: 0;
     position: absolute;
     right: 0;
@@ -8678,7 +8686,15 @@ a.bundle-btn {
     transition: all 0.5s ease 0s;
 }
 .furits-header .menu-style-2 nav > ul > li > a {
-    color: #578a01;
+    font-size: 15px;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color:#F26BB5;
+}
+.furits-header .menu-style-2 nav > ul > li > a:hover {
+        
+        color: #fff;
+    background: #F26BB5;
 }
 .furits-login-cart {
     display: flex;
@@ -8692,12 +8708,12 @@ a.bundle-btn {
     margin-left: 0;
 }
 .furits-login li a {
-    color: #969696;
+    color: #000000;
     text-transform: uppercase;
 }
 .furits-login {
-    padding: 62px 0 10px;
-    margin-top: 1px;
+    padding: 54px 0 10px;
+    margin-top: 16px;
 }
 .furits-login li::after {
     background-color: #969696;
@@ -8792,12 +8808,12 @@ a.bundle-btn {
     margin: 30px 0 52px;
 }
 .furits-slider {
-    background-image: url("/img/banner.png");
+    background-image: url(https://previews.123rf.com/images/marigo/marigo1612/marigo161200022/69722704-uma-colagem-de-manicure-de-ver%C3%A3o-colorido-na-m%C3%A3o-feminina-com-flores.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; /* Opcional: centraliza a imagem */
     width: 100vw;
-    height: 56vh;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9014,7 +9030,7 @@ a.bundle-btn {
 .section-title-furits {
     position: relative;
     margin-bottom: 33px;
-    margin-top: 0px;
+    margin-top: 25px;
 }
 .product-fruit-slider.owl-carousel .owl-stage-outer {
     padding: 25px 0;
