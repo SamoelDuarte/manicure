@@ -3,13 +3,12 @@
         <div class="container-fluid">
             <div class="header-bottom-wrapper ">
                 <div class="logo-2 ptb-35 menu-hover">
-                    <a href="{{route('home')}}">
-                        <img style="width: 398px" src="{{asset('img/icone.png')}}" alt="">
-                    </a>
+                    <a href="#"><img src="https://static.thenounproject.com/png/2717920-200.png" alt="" width="95px" height="95px"></a>
                 </div>
                 <div class="menu-style-2 handicraft-menu menu-hover">
                     <nav>
                         <ul>
+                        
                             <li><a href="{{route('home')}}">Inicio</a></li>
                             <li>
                                 <a href="{{route('shop.index')}}">

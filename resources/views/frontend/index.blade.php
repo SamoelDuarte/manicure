@@ -4,7 +4,7 @@
     <!-- promotion area start -->
     @if ($coupon)
         <div class="p-1 text-white text-center" style="background-image: url('{{ asset('frontend/img/bg/12.jpg') }}')">
-            Variedade de produtos em um só lugar!
+            Designer de unhas!
         </div>
     @endif
     <!-- promotion area end -->
@@ -88,7 +88,7 @@
 
     <!-- banner area start -->
     <div class="fruits-choose-area pb-65 bg-img mt-5"
-        style="background-image: url('{{ asset('frontend/img/banner/53.png') }}')">
+        style="background-image:url(https://img.freepik.com/free-photo/still-life-tools-nail-art_23-2150321313.jpg?size=626&ext=jpg&ga=GA1.1.969032829.1714322674&semt=ais)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-xl-9 col-12">

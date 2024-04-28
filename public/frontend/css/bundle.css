@@ -122,7 +122,8 @@ h6 {
     font-size: 16px;
 }
 ul {
-    margin: 0px;
+    display:flex;
+    margin right: 1px;
     padding: 0px;
 }
 li { list-style: none }
@@ -712,7 +713,7 @@ textarea:focus {
 .pt-35 { padding-top: 35px }
 .pt-40 { padding-top: 40px }
 .pt-45 { padding-top: 45px }
-.pt-50 { padding-top: 50px }
+.pt-50 { padding-top: 25px }
 .pt-55 { padding-top: 55px }
 .pt-60 { padding-top: 60px }
 .pt-65 { padding-top: 65px }
