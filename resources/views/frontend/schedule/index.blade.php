@@ -15,24 +15,28 @@
             headerToolbar: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            // Textos dos botões
+            buttonText: {
+                today: 'Hoje',
             },
             events: [],
             dayCellDidMount: function(info) {
                 var availability = {!! $availability !!};
                 var dayOfWeek = info.date.getDay(); // 0 (Domingo) - 6 (Sábado)
-                var isAvailable = availability.some(item => isAvailableString(item.day_of_week) === dayOfWeek);
+                var isAvailable = availability.some(item => isAvailableString(item.day_of_week) ===
+                    dayOfWeek);
 
                 if (isAvailable) {
                     info.el.style.backgroundColor = '#00800047'; // Dia disponível (verde)
                     info.el.addEventListener('click', function() {
-                    // Exibir um alerta com informações sobre a célula clicada
-                    alert('Dia disponível: ' + info);
-                         
-                });
+                        // Exibir um alerta com informações sobre a célula clicada
+                        alert('Dia disponível: ' + info);
+
+                    });
                 } else {
                     info.el.style.backgroundColor = '#ff00002b'; // Dia indisponível (vermelho)
-             
+
                 }
             }
         });
