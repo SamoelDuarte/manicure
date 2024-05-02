@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('title', 'Agenda')
 
+<style>
+    #calendar {
+    width: 800px;
+    height: 600px;
+}
+</style>
 @section('content')
     <div id='calendar'></div>
 @endsection

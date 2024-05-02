@@ -44,10 +44,6 @@ Route::middleware(['middleware' => 'auth', 'verified'])->group(function() {
     Route::get('/user/profile/remove-image', [UserController::class, 'removeImage'])->name('user.remove_image');
     Route::get('/user/addresses', [UserController::class, 'addresses'])->name('user.addresses');
     Route::get('/user/orders', [UserController::class, 'orders'])->name('user.orders');
-
- 
-   
-    
 });
 
 Route::middleware(['middleware' => 'auth', 'checkCart'])->group(function() {

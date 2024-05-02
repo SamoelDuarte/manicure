@@ -18,18 +18,35 @@
     <div class="sidebar-heading">
         Interface
     </div>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#agenda" aria-expanded="true"
+            aria-controls="agenda">
+            <i class="fas fa-mail-bulk"></i>
+            <span>Agenda</span>
+        </a>
+
+        <div id="agenda" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.schedule.index') }}">
+                    Horários de Atendimento
+                </a>
+            </div>
+        </div>
+    </li>
     <!-- Nav Item - Pages Collapse Menu -->
     @forelse($admin_side_menu as $link)
         @can($link->permission_title)
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse{{ $link->as }}"
-                   aria-expanded="true" aria-controls="collapse{{ $link->as }}">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapse{{ $link->as }}" aria-expanded="true"
+                    aria-controls="collapse{{ $link->as }}">
                     <i class="{{ $link->icon }}"></i>
                     <span>{{ $link->title }}</span>
                 </a>
-                <div id="collapse{{ $link->as }}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapse{{ $link->as }}" class="collapse" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        @if(in_array($link->to, $routes_name))
+                        @if (in_array($link->to, $routes_name))
                             <a class="collapse-item" href="{{ route($link->to) }}">
                                 {{ $link->title }}
                             </a>
@@ -37,11 +54,10 @@
                     </div>
                 </div>
             </li>
-
         @endcan
     @empty
     @endforelse
-    
+
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#integration"
             aria-expanded="true" aria-controls="integration">
@@ -57,17 +73,14 @@
                 <a class="collapse-item" href="/admin/bling">
                     Bling
                 </a>
-               
+
             </div>
         </div>
-
-        
-
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#post"
-            aria-expanded="true" aria-controls="post">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#post" aria-expanded="true"
+            aria-controls="post">
             <i class="fas fa-mail-bulk"></i>
             <span>Post</span>
         </a>
@@ -79,9 +92,6 @@
                 </a>
             </div>
         </div>
-
-        
-
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider">
