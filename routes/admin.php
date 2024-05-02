@@ -15,7 +15,6 @@ use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\UserAddressController;
-use App\Http\Controllers\Backend\ShippingCompanyController;
 use App\Http\Controllers\Backend\PaymentMethodController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\SettingController;
@@ -24,7 +23,7 @@ use App\Http\Controllers\Backend\BlingController;
 use App\Http\Controllers\Backend\MercadoLivreController;
 use App\Http\Controllers\Backend\PostController;
 use App\Http\Controllers\Backend\ServicesController;
-use App\Http\MercadoLivre;
+use App\Http\Controllers\Backend\ScheduleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -92,6 +91,10 @@ Route::group(['middleware' => ['roles']], function () {
 
     Route::prefix('/etiqueta')->controller(OrderController::class)->group(function () {
         Route::get('/{id}', 'imprimir');
+    }); 
+
+    Route::prefix('/agenda')->controller(ScheduleController::class)->group(function () {
+        Route::get('/', 'index')->name('schedule.index');
     }); 
     
 });
