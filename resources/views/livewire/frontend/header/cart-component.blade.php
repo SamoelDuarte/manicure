@@ -1,3 +1,8 @@
+
+
+
+
+
 <div class="header-cart-4 furits-cart">
 
     <a class="icon-cart" href="{{route('cart.index')}}">
@@ -11,5 +16,6 @@
 {{--        </span>--}}
 {{--        <i class="ti-shopping-cart"></i>--}}
 {{--    </a> --}}
+
 
 </div>

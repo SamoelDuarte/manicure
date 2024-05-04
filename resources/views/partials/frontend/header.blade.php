@@ -4,6 +4,7 @@
             <div class="header-bottom-wrapper ">
                 <div class="logo-2 ptb-35 menu-hover">
                     <a href="#"><img src="https://static.thenounproject.com/png/2717920-200.png" alt="" width="95px" height="95px"></a>
+
                 </div>
                 <div class="menu-style-2 handicraft-menu menu-hover">
                     <nav>
