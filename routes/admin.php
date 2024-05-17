@@ -65,6 +65,7 @@ Route::group(['middleware' => ['roles']], function () {
     Route::resource('banner', BannerController::class);
     Route::resource('mercadoLivre', MercadoLivreController::class);
     Route::resource('posts', PostController::class);
+    Route::resource('services', ServicesController::class);
 
     Route::prefix('/mercadolibre')->controller(MercadoLivreController::class)->group(function () {
         Route::get('/', 'index');
@@ -95,7 +96,10 @@ Route::group(['middleware' => ['roles']], function () {
 
     Route::prefix('/agenda')->controller(ScheduleController::class)->group(function () {
         Route::get('/', 'index')->name('schedule.index');
+        Route::post('/atualiza', 'update')->name('schedule.update');
     }); 
-    
+    Route::prefix('/servico')->controller(ServicesController::class)->group(function () {
+        Route::get('/', 'index')->name('service.index');
+    }); 
 });
 

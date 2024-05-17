@@ -33,6 +33,24 @@
             </div>
         </div>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#service" aria-expanded="true"
+            aria-controls="service">
+            <i class="fas fa-mail-bulk"></i>
+            <span>Servicos</span>
+        </a>
+
+        <div id="service" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.service.index') }}">
+                    Lista de Serviço
+                </a>
+            </div>
+        </div>
+    </li>
+
+
     <!-- Nav Item - Pages Collapse Menu -->
     @forelse($admin_side_menu as $link)
         @can($link->permission_title)
