@@ -568,10 +568,14 @@ pre code {
   }
 }
 .row {
+  margin-top: 80px;
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
   margin-right: -15px;
   margin-left: -15px;
+  
+  justify-content:space-between;
+ 
 }
 
 .no-gutters {
@@ -8974,6 +8978,7 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+  
 }
 
 @media (min-width: 576px) {
@@ -9292,4 +9297,24 @@ a.text-dark:hover, a.text-dark:focus {
   word-wrap: break-word;
   background-color: #ffffff75;
   background-clip: border-box;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 5px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }

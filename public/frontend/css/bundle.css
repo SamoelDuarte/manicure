@@ -713,7 +713,7 @@ textarea:focus {
 .pt-35 { padding-top: 35px }
 .pt-40 { padding-top: 40px }
 .pt-45 { padding-top: 45px }
-.pt-50 { padding-top: 25px }
+/*.pt-50 { padding-top: 25px }*/
 .pt-55 { padding-top: 55px }
 .pt-60 { padding-top: 60px }
 .pt-65 { padding-top: 65px }
@@ -784,7 +784,7 @@ textarea:focus {
 .pb-35 { padding-bottom: 35px }
 .pb-40 { padding-bottom: 40px }
 .pb-45 { padding-bottom: 45px }
-.pb-50 { padding-bottom: 50px }
+/*.pb-50 { padding-bottom: 50px }*/
 .pb-55 { padding-bottom: 55px }
 .pb-60 { padding-bottom: 60px }
 .pb-65 { padding-bottom: 65px }

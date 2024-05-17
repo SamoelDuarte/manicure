@@ -3,16 +3,17 @@
 @section('content')
     <!-- promotion area start -->
     @if ($coupon)
-        <div class="p-1 text-white text-center" style="background-image: url('{{ asset('frontend/img/bg/12.jpg') }}')">
+        <!--<div class="p-1 text-white text-center" style="background-image: url('{{ asset('frontend/img/bg/12.jpg') }}')">
             Designer de unhas!
-        </div>
+        </div>-->
     @endif
     <!-- promotion area end -->
 
     @include('partials.frontend.sliders')
     <!-- categories area start -->
+    
     <div class="container">
-
+   
 
         <div class="pb-50">
             <div class="section-title-furits text-center">
@@ -24,62 +25,115 @@
                 <header class="text-center">
                     <p class="small text-muted small text-uppercase mb-1">COLEÇÕES CUIDADOSAMENTE CRIADAS</p>
                     {{-- <h2 class="h5 text-uppercase mb-4">NAVEGUE NOSSAS CATEGORIAS</h2> --}}
+                    <section class="icons-container">
+
+                    <div class="icons">
+       <img src="https://cdn-icons-png.flaticon.com/512/80/80405.png" alt="">
+        <div class="info">
+            <h3>ESMALTERIA</h3>
+            <span>Lorem ipsum</span>
+        </div>
+    </div>
+
+  <div class="icons">
+  <img src="https://cdn-icons-png.flaticon.com/512/2437/2437898.png" alt="">
+        <div class="info">
+            <h3>DESIGN NAIL</h3>
+            <span>Lorem ipsum</span>
+        </div>
+    </div>
+
+   <div class="icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/1941/1941105.png" alt="">
+        <div class="info">
+            <h3>PROFISSIONAL</h3>
+            <span>Lorem ipsum</span>
+        </div>
+    </div>
+
+   <div class="icons">
+        <img src="https://static.thenounproject.com/png/3820068-200.png" alt="">
+        <div class="info">
+            <h3>MANICURE</h3>
+            <span>Lorem ipsum</span>
+        </div>
+    </div>
+
+    
+
+</section>
                 </header>
+
                 <div class="row">
                     <div class="col-md-4 mb-4 mb-md-0 sombra-esquerda-baixo">
-                        <a class="category-item" href="{{ route('shop.index', $categories[0]->slug ?? '') }}">
-                            @if ($categories[0]->cover ?? '')
-                                <img class="img-fluid" 
-                                    src="{{ asset('storage/images/categories/' . $categories[0]->cover ?? '') }}"
-                                    alt="{{ $categories[0]->name ?? '' }}">
-                            @else
-                                <img class="img-fluid" src="{{ asset('frontend/assets/categories/cat-img-1.jpg') }}"
-                                    alt="">
-                            @endif
-                            <strong class="category-item-title">{{ $categories[0]->name ?? '' }}</strong>
-                        </a>
+                    <section class="galery">
+        <div class="product-list">
+            <div class="product">
+                <img src="path/to/image1.jpg" alt="Produto 1">
+                <h2>Produto 1</h2>
+                <p class="price">R$ 49,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="path/to/image2.jpg" alt="Produto 2">
+                <h2>Produto 2</h2>
+                <p class="price">R$ 79,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="path/to/image3.jpg" alt="Produto 3">
+                <h2>Produto 3</h2>
+                <p class="price">R$ 99,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="path/to/image3.jpg" alt="Produto 4">
+                <h2>Produto 3</h2>
+                <p class="price">R$ 99,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="path/to/image3.jpg" alt="Produto 5">
+                <h2>Produto 3</h2>
+                <p class="price">R$ 99,99</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="product">
+                <img src="path/to/image1.jpg" alt="Produto 1">
+                <h2>Produto 1</h2>
+                <p class="price">R$ 49,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="path/to/image2.jpg" alt="Produto 2">
+                <h2>Produto 2</h2>
+                <p class="price">R$ 79,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="path/to/image3.jpg" alt="Produto 3">
+                <h2>Produto 3</h2>
+                <p class="price">R$ 99,99</p>
+                <button>Comprar</button>
+            </div>
+          
+        </div>
+                    </section>
+    </div>
                     </div>
-                    <div class="col-md-4 mb-4 mb-md-0 ">
-                        <a class="category-item mb-4 " href="{{ route('shop.index', $categories[1]->slug ?? '') }}">
-                            @if ($categories[1]->cover ?? '')
-                                <img class="img-fluid " style="margin-bottom: 24px"
-                                    src="{{ asset('storage/images/categories/' . $categories[1]->cover ?? '') }}"
-                                    alt="{{ $categories[1]->name ?? '' }}">
-                            @else
-                                <img class="img-fluid" style="margin: 7px;"
-                                    src="{{ asset('frontend/assets/categories/cat-img-2.jpg') }}"
-                                    alt="{{ $categories[1]->name ?? '' }}">
-                            @endif
-                            <strong class="category-item-title"
-                                style="margin-top: -124px;">{{ $categories[1]->name ?? '' }}</strong>
-                        </a>
-                        <a class="category-item" href="{{ route('shop.index', $categories[2]->slug ?? '') }}">
-                            @if ($categories[2]->cover ?? '')
-                                <img class="img-fluid"
-                                    src="{{ asset('storage/images/categories/' . $categories[2]->cover ?? '') }}"
-                                    alt="{{ $categories[2]->name ?? '' }}">
-                            @else
-                                <img class="img-fluid" style="margin: 9px;"
-                                    src="{{ asset('frontend/assets/categories/cat-img-3.jpg') }}"
-                                    alt="{{ $categories[2]->name ?? '' }}">
-                            @endif
-                            <strong class="category-item-title"
-                                style="margin-top: 104px;">{{ $categories[2]->name ?? '' }}</strong>
-                        </a>
-                    </div>
-                    <div class="col-md-4 sombra-esquerda-baixo">
-                        <a class="category-item" href="{{ route('shop.index', $categories[3]->slug ?? '') }}">
-                            @if ($categories[3]->cover ?? '')
-                                <img class="img-fluid"
-                                    src="{{ asset('storage/images/categories/' . $categories[3]->cover ?? '') }}"
-                                    alt="">
-                            @else
-                                <img class="img-fluid" src="{{ asset('frontend/assets/categories/cat-img-4.jpg') }}"
-                                    alt="{{ $categories[3]->name ?? '' }}">
-                            @endif
-                            <strong class="category-item-title">{{ $categories[3]->name ?? '' }}</strong>
-                        </a>
-                    </div>
+                    <!--<div class="col-md-4 sombra-esquerda-baixo">
+                    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://studioandreaaronne.com.br/wp-content/uploads/2023/07/273912377-372031824314185-6626888513630609174-n-1676653877.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://studioandreaaronne.com.br/wp-content/uploads/2023/07/273912377-372031824314185-6626888513630609174-n-1676653877.jpg" alt="Image 2">
+        </div>
+        
+        <!-- Add more gallery items as needed 
+    </div>
+                    </div>-->
                 </div>
             </section>
         </div>
@@ -88,7 +142,7 @@
 
     <!-- banner area start -->
     <div class="fruits-choose-area pb-65 bg-img mt-5"
-        style="background-image:url(https://img.freepik.com/free-photo/still-life-tools-nail-art_23-2150321313.jpg?size=626&ext=jpg&ga=GA1.1.969032829.1714322674&semt=ais)">
+        style="background-image:url(https://img.freepik.com/fotos-premium/esmalte-vermelho-e-verde-derramado-de-garrafa-com-pano-de-fundo-de-espaco-branco-copia_23-2148194799.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-xl-9 col-12">
@@ -169,6 +223,85 @@
             </div>
         </div>
     </div>
+
+    <main>
+    <ul class='slider'>
+        <li class='item' style="background-image: url('https://wallpapers.com/images/high/nail-background-1242-x-1226-r7g6xmcphmgbt2ww.webp')">
+            <div class='content'>
+                <h2 class='title'>"Lossless Youths"</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+                <button>Read More</button>
+            </div>
+        </li>
+        <li class='item' style="background-image: url('https://wallpapers.com/images/high/nail-background-5oayxj8nufs96ssv.webp')">
+            <div class='content'>
+                <h2 class='title'>"Estrange "</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+                <button>Read More</button>
+            </div>
+        </li>
+        <li class='item' style="background-image: url('https://wallpapers.com/images/high/nail-background-5sv3cufplu8kl5t1.webp')">
+            <div class='content'>
+                <h2 class='title'>"The Gate Keeper"</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+                <button>Read More</button>
+            </div>
+        </li>
+        <li class='item' style="background-image: url('https://wallpapergod.com/images/hd/nails-2111X1408-wallpaper-ayjxovit5i8lv6cm.jpeg')">
+            <div class='content'>
+                <h2 class='title'>"Last Trace Of Us"</h2>
+                <p class='description'>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                </p>
+                <button>Read More</button>
+            </div>
+        </li>
+        <li class='item' style="background-image: url('https://wallpapers.com/images/high/nail-background-2000-x-1333-8l40fxep26qs5khy.webp')">
+            <div class='content'>
+                <h2 class='title'>"Urban Decay"</h2>
+                <p class='description'>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                </p>
+                <button>Read More</button>
+            </div>
+        </li>
+        <li class='item' style="background-image: url('https://wallpapers.com/images/high/nail-background-1920-x-1080-ouclxjspgzm5tbky.webp')">
+            <div class='content'>
+                <h2 class='title'>"The Migration"</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+                <button>Read More</button>
+            </div>
+        </li>
+    </ul>
+    <nav class='nav'>
+        <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+        <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+    </nav>
+</main>
+
+
+
+<script>
+    const slider = document.querySelector('.slider');
+
+    function activate(e) {
+        const items = document.querySelectorAll('.item');
+        e.target.matches('.next') && slider.append(items[0])
+        e.target.matches('.prev') && slider.prepend(items[items.length - 1]);
+    }
+
+    document.addEventListener('click', activate, false);
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
     <!-- services area end -->
 @endsection
