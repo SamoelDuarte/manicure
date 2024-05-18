@@ -64,64 +64,7 @@
 </section>
                 </header>
 
-                <div class="row">
-                    <div class="col-md-4 mb-4 mb-md-0 sombra-esquerda-baixo">
-                    <section class="galery">
-        <div class="product-list">
-            <div class="product">
-                <img src="path/to/image1.jpg" alt="Produto 1">
-                <h2>Produto 1</h2>
-                <p class="price">R$ 49,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="path/to/image2.jpg" alt="Produto 2">
-                <h2>Produto 2</h2>
-                <p class="price">R$ 79,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="path/to/image3.jpg" alt="Produto 3">
-                <h2>Produto 3</h2>
-                <p class="price">R$ 99,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="path/to/image3.jpg" alt="Produto 4">
-                <h2>Produto 3</h2>
-                <p class="price">R$ 99,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="path/to/image3.jpg" alt="Produto 5">
-                <h2>Produto 3</h2>
-                <p class="price">R$ 99,99</p>
-                <button>Comprar</button>
-            </div>
-
-            <div class="product">
-                <img src="path/to/image1.jpg" alt="Produto 1">
-                <h2>Produto 1</h2>
-                <p class="price">R$ 49,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="path/to/image2.jpg" alt="Produto 2">
-                <h2>Produto 2</h2>
-                <p class="price">R$ 79,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="path/to/image3.jpg" alt="Produto 3">
-                <h2>Produto 3</h2>
-                <p class="price">R$ 99,99</p>
-                <button>Comprar</button>
-            </div>
           
-        </div>
-                    </section>
-    </div>
-                    </div>
                     <!--<div class="col-md-4 sombra-esquerda-baixo">
                     <div class="gallery">
         <div class="gallery-item">
